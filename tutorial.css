@@ -20,7 +20,7 @@ body {
     padding-bottom: 2rem;
 
     gap: 10px 30px;
-    background-color: snow;
+    background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
@@ -85,5 +85,6 @@ header img{
             "download";
 
     }
+
 
 }
