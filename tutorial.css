@@ -79,13 +79,15 @@ header img{
         grid-template-areas:
             "header"
             "header"
+            "title"
             "image"
             "aboutHeader"
             "aboutBody"
             "download";
-
     }
 
+    .title{
+        font-size: 0.8em;
+    }
 
 }
-
