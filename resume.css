@@ -1,0 +1,121 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* I wanted it to look like h1s, but it could cause accesibillity issues I think? I just made it so they looked like h1s*/
+h2{
+    font-size: 2em; margin: .67em 0 
+}
+
+.content {
+    display: grid;
+    max-width: 650px;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+
+    gap: 10px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    /*2x4 grid*/
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header header"
+        "objectiveHeader objective"
+        "educationHeader education"
+        "experienceHeader experience"
+        "techHeader tech";
+    align-items: center;
+}
+
+/*grid area assignments*/
+
+header{
+    grid-area: header;
+    text-align: left;
+}
+
+header img{
+    max-width: 30px;
+}
+
+.objectiveHeader {
+    grid-area: objectiveHeader;
+    align-self: flex-start;
+}
+
+.objectiveBody {
+    grid-area: objective;
+}
+
+.educationHeader {
+    grid-area: educationHeader;
+    align-self: flex-start;
+}
+
+.educationBody{
+    grid-area: education;
+}
+
+.experienceHeader{
+    grid-area: experienceHeader;
+    align-self: flex-start;
+}
+
+.experienceBody{
+    grid-area: experience;
+}
+
+.techHeader{
+    grid-area: techHeader;
+    align-self: flex-start;
+}
+
+.techBody{
+    grid-area: tech;
+}
+
+/*media for mobile */
+@media (max-width: 600px) {
+    .content {
+        /* single-column layout */
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0px;
+
+        /*grid areas stack vertically */
+        grid-template-areas:
+            "header"
+            "objectiveHeader"
+            "objective"
+            "educationHeader"
+            "education"
+            "experienceHeader"
+            "experience"
+            "techHeader"
+            "tech";
+
+        box-shadow: 0 0 0; /* remove card from background, it looked kinda ugly on mobile*/
+    }
+
+}
+
+ul{
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 1em;
+}
