@@ -4,7 +4,7 @@ body {
     min-height: 100vh;
     margin: 0;
     color: black;
-    background-image: url(imgs/cover\ image.png);
+    background-image: url(imgs/coverimage.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,3 +88,4 @@ header img{
 
 
 }
+
